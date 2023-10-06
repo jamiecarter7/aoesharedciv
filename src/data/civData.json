@@ -1,0 +1,539 @@
+[
+    {
+        "civilization": "aztec",
+        "type": [
+            "infantry",
+            "monk"
+        ],
+        "strategy": [
+            { "statement": "Strong eles - bonus vs skirmishers" },
+            { "statement": "Build TC's in castle age before imp", "task": "self"},
+            { "statement": "Age up ASAP for fast economy for whole team" },
+            { "statement": "Strong eles - bonus vs skirmishers" }
+        ],
+        "synergies" : ["tc", "eles", "monks"],
+        "weakness" : [],
+        "beats": [],
+        "economy": [
+            {
+                "statement": "Villagers carry +{{BASE}}",
+                "base": 3,
+                "type": "base"
+            },
+            {
+                "statement": "+{{BASE}} Monk hit points for each Monastery technology",
+                "base": 5,
+                "type": "base"
+            },
+            {
+                "statement": "Start with +{{BASE}} gold",
+                "base": 50,
+                "type": "base"
+            },
+            {
+                "statement": "Relics generate +{{BASE}}% gold",
+                "base": 33,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Military units created {{BASE}}% faster",
+                "base": 11,
+                "type": "base"
+            },
+            {
+                "statement": "Start with +{{BASE}} gold",
+                "base": 50,
+                "type": "base"
+            },
+            {
+                "statement": "Atlatl (Skirmishers +{{BASE}} attack, +{{BASE}} range)",
+                "base": 1,
+                "type": "unqiue"
+            },
+            {
+                "statement": "Garland Wars (+{{BASE}} infantry attack)",
+                "base": 4,
+                "type": "unqiue"
+            }
+        ]
+    },
+    {
+        "civilization": "bengalis",
+        "type": [
+            "elephant",
+            "naval"
+        ],
+        "economy": [
+            {
+                "statement": "Town Centers spawn {{BASE}} Villagers when the next Age is reached",
+                "base": 2,
+                "type": "base"
+            },
+            {
+                "statement": "Mahayana (Villagers and Monks take {{BASE}}% less population space)",
+                "base": 10,
+                "type": "unique"
+            },
+            {
+                "statement": "Trade units yield {{BASE}}% food in addition to gold",
+                "base": 10,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Elephant units receive {{BASE}}% less bonus damage and are more resistant to conversion",
+                "base": 25,
+                "type": "base"
+            },
+            {
+                "statement": "Cavalry {{BASE}} attack vs. Skirmishers",
+                "base": 2,
+                "type": "base"
+            },
+            {
+                "statement": "Ships regenerate {{BASE}} HP per minute",
+                "base": 15,
+                "type": "base"
+            },
+            {
+                "statement": "Monks +{{BASE}}/+{{BASE}}P armor",
+                "base": 3,
+                "type": "base"
+            },
+            {
+                "statement": "Paiks (Rathas and elephant units attack {{BASE}}% faster)",
+                "base": 20,
+                "type": "unique"
+            }
+        ]
+    },
+    {
+        "civilization": "berbers",
+        "type": ["cavalry", "naval"],
+        "economy": [
+            {
+                "statement": "Villagers move {{BASE}}% faster in Dark Age, {{BASE1}}% starting in Feudal Age",
+                "base": 5,
+                "base1": 10,
+                "type": "base"
+            },
+            {
+                "statement": "Stable units cost {{BASE}}% in Castle, {{BASE1}}% in Imperial Age",
+                "base": -15,
+                "base1": -20,
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Ships move {{BASE}}% faster",
+                "base": 10,
+                "type": "base"
+            },
+            {
+                "statement": "Kasbah (team castles work {{BASE}}% faster)",
+                "base": 25,
+                "type": "unique"
+            },
+            {
+                "statement": "Maghrebi Camels (Camel units regenerate)",
+                "base": 0,
+                "type": "unique"
+            },
+            {
+                "statement": "Genitour available in the Archery Range starting in the Castle Age",
+                "base": 0,
+                "type": "team"
+            }            
+        ]
+    },
+    {
+        "civilization": "bohemians",
+        "type": ["gunpower", "monk"],
+        "economy": [
+            {
+                "statement": "Blacksmiths and Universities cost {{BASE}} wood", 
+                "base": 0,
+                "type": "base"
+            },
+            {
+                "statement": "[Fervor] and [Sanctity] affect Villagers", 
+                "type": "base"
+            },
+            {
+                "statement": "Mining Camp technologies free", 
+                "type": "base"
+            },
+
+            {
+                "statement": "Hussite Reforms (Monks and Monastery technologies have their gold cost replaced by food)",
+                "type": "unique"
+            },
+            {
+                "statement": "Markets work {{BASE}}% faster", 
+                "base": 80,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Chemistry and Hand Cannoneer available in Castle Age",
+                "type": "base"
+            },
+            {
+                "statement": "Spearman-line deals +{{BASE}}% bonus damage", 
+                "base": 25,
+                "type": "base"
+            },
+            {
+                "statement": "Wagenburg Tactics (Gunpowder units move {{BASE}}% faster)", 
+                "base": 15,
+                "type": "unique"
+            }
+        ]
+    },
+    {
+        "civilization": "britons",
+        "type": ["foot archer"],
+        "economy": [
+            {
+                "statement": "Town Centers cost {{BASE}} wood starting in the Castle Age", 
+                "base": 0,
+                "type": "base"
+            },
+            {
+                "statement": "Shepherds work {{BASE}}% faster", 
+                "base": 25,
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Foot archers (except skirmishers) +{{BASE}} range in Castle and Imperial Age (+{{BASE1}} total)", 
+                "base": 1,
+                "base1": 2,
+                "type": "base"
+            },
+            {
+                "statement": "Yeomen (+{{BASE}} foot archer range +{{BASE1}} tower attack)", 
+                "base": 1,
+                "base1": 2,
+                "type": "unique"
+            },
+            {
+                "statement": "Warwolf (Trebuchets do blast damage)", 
+                "type": "unique"
+            },
+            {
+                "statement": "Archery Ranges work {{BASE}}% faster", 
+                "base": 10,
+                "type": "team"
+            }
+        ]
+    },
+    {
+        "civilization": "bulgarians",
+        "type": ["infantry", "cavalry"],
+        "economy": [
+            {
+                "statement": "Town Centers cost {{BASE}} stone", 
+                "base": -50,
+                "cost": 100,
+                "type": "base"
+            },
+            {
+                "statement": "Blacksmith and Siege Workshop technologies cost {{BASE}} food", 
+                "base": -50,
+                "cost": 100,
+                "type": "base"
+            },
+
+            {
+                "statement": "Blacksmiths work {{BASE}}% faster", 
+                "base": 80,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Militia-line upgrades free", 
+                "type": "base"
+            },
+            {
+                "statement": "Can build Krepost", 
+                "type": "base"
+            },
+            {
+                "statement": "Stirrups (Cavalry attack {{BASE}}% faster)", 
+                "base": 33,
+                "type": "unique"
+            },
+            {
+                "statement": "Bagains (Militia-line gains +{{BASE}} armor)", 
+                "base": 5,
+                "type": "unique"
+            }
+        ]
+    },
+    {
+        "civilization": "burgundians",
+        "type": ["cavalry"],
+        "economy": [
+            {
+                "statement": "Economic upgrades available one age earlier and cost {{BASE}}% food", 
+                "base": -33,
+                "type": "base"
+            },
+            {
+                "statement": "Stable technologies cost {{BASE}}%", 
+                "base": -50,
+                "type": "base"
+            },
+            {
+                "statement": "Burgundian Vineyards (Farmers slowly generate gold in addition to food)",
+                "type": "unique"
+            },
+            {
+                "statement": "Relics generate both Gold & Food", 
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Cavalier upgrade available in Castle Age",
+                "type": "base"
+            },
+            {
+                "statement": "Gunpowder units +{{BASE}}% attack",
+                "base": 25,
+                "type": "base"
+            },
+            {
+                "statement": "Flemish Revolution (Upgrades all existing Villagers to Flemish Militia; create Flemish Militia at Barracks)", 
+                "base": -50,
+                "cost": 100,
+                "type": "unique"
+            }
+
+        ]
+    },
+    {
+        "civilization": "burmese",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "byzantines",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "celts",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "chinese",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "cumans",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "dravidians",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "ethiopians",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "franks",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "goths",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "gurjaras",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "hindustanis",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "huns",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "incas",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "italians",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "japanese",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "khmer",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "koreans",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "lithuanians",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "magyars",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "malay",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "malians",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "mayans",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "mongals",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "persians",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "poles",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "portugese",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "romans",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "saracens",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "sicilians",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "slavs",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "spanish",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "tatars",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "teutons",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "turks",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "vietnamese",
+        "type": [],
+        "economy": [],
+        "military": []
+    },
+    {
+        "civilization": "vikings",
+        "type": [],
+        "economy": [],
+        "military": []
+    }
+]
