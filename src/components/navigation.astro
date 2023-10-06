@@ -1,8 +1,10 @@
 ---
+import CivSelect from './civSelect'
 import Multiplier from './multiplier'
 ---
 
-<div class="h-16 flex justify-between items-center p-4 px-6 bg-indigo-900 text-white">
-    <p>Shared civ tool</p>
+<div class="relative z-50 h-16 grid grid-cols-3 items-center px-6 bg-indigo-900 text-white">
+    <h1 class="text-xl font-semibold">AOE:DE - Shared civ bonus</h1>
+    <CivSelect client:load />
     <Multiplier client:load/>
 </div>

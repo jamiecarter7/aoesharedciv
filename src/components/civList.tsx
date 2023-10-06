@@ -1,6 +1,6 @@
 import { For, createMemo } from "solid-js";
 
-import { civData, type Civilization } from "./civStore";
+import { civData, changeMyCiv, type Civilization } from "./civStore";
 import { multiplier } from "./multiplier"
 
 export default function MyComponent() {
@@ -77,10 +77,11 @@ export default function MyComponent() {
           {(civ, index) => (
             <div
               class={`relative w-full p-8 rounded-xl  ${
-                index() === 0 ? "border-2 border-purple-800 shadow-lg" : ""
+                civ.myCiv ? "border-2 border-purple-800 shadow-lg" : ""
               }`}
+              onClick={[changeMyCiv, index()]}
             >
-              {index() === 0 ? (
+              {civ.myCiv ? (
                 <h2 class="absolute right-8 bg-purple-800 p-2.5 py-1 rounded-full text-sm uppercase font-semibold">
                   My civilization
                 </h2>
