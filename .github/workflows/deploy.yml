@@ -1,0 +1,28 @@
+name: Deploy AOE:DE Shared Civ Bonus Tool
+
+on: push
+
+jobs:
+  build:
+    # needs: test-application
+    name: build server
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v3
+        - uses: oven-sh/setup-bun@v1
+  
+        # run any `bun` or `bunx` command
+        - run: bun install
+        # - run: bun index.ts
+        - run: bun run build
+
+        
+        - name: Install SSH Key
+          uses: shimataro/ssh-key-action@v2
+          with:
+            key: ${{ secrets.SSH_PRIVATE_KEY }}
+            known_hosts: "just-a-placeholder-so-we-dont-get-errors"
+        - name: Adding Known Hosts
+          run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+        - name: Deploy with rsync
+          run: rsync -avz dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/maybelatergames.co.uk/html/aoesharedciv/
