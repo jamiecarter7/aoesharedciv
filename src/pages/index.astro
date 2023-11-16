@@ -1,14 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import CivLists from "../components/civList.jsx";
-import CivSelected from "../components/civSelectedList";
+import CivLists from "../components/civList";
+import CivSynergies from "../components/civSynergies";
+import Stage from "../components/stage";
+// import CivSelected from "../components/civSelectedList";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
     <!-- <CivSelected client:load /> -->
     <div class="w-full m-auto p-12">
+      <CivSynergies client:load />
       <CivLists client:load />
+      <Stage client:load>
+        
     </div>
   </main>
 </Layout>

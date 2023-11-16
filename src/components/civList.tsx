@@ -1,33 +1,31 @@
-import { For, createMemo } from "solid-js";
+import { For } from "solid-js";
 
-import { civData, changeMyCiv, type Civilization } from "./civStore";
+import { civsData, changeMyCiv, type Civilization } from "./civStore";
 import { multiplier } from "./multiplier"
 
 export default function MyComponent() {
-  const { civsObj } = civData;
-  console.log("thingy", civsObj());
 
-  const renderedStatement = (
-    statement: string,
-    multiplier: number,
-    base?: number,
-    base1?: number
-  ) => {
-    let str = statement;
-    if (typeof base === 'number') {
-      const dynamicNumber = base * multiplier;
-      const div = '<span class="text-green-400">' + dynamicNumber + "</span>";
-      str = str.replaceAll("{{BASE}}", div);
-    }
-    if (typeof base1 === 'number') {
-      const dynamicNumber1 = base1 * multiplier;
-      const div1 = '<span class="text-green-400">' + dynamicNumber1 + "</span>";
-      str = str.replaceAll("{{BASE1}}", div1);
-    }
-    console.log(str);
-
-    return str;
-  };
+  // const renderedStatement = (
+  //   statement: string,
+  //   multiplier: number,
+  //   base?: number,
+  //   base1?: number
+  // ) => {
+  //   let str = statement;
+  //   if (typeof base === 'number') {
+  //     const dynamicNumber = base * multiplier;
+  //     const div = '<span class="text-green-400">' + dynamicNumber + "</span>";
+  //     str = str.replaceAll("{{BASE}}", div);
+  //   }
+  //   if (typeof base1 === 'number') {
+  //     const dynamicNumber1 = base1 * multiplier;
+  //     const div1 = '<span class="text-green-400">' + dynamicNumber1 + "</span>";
+  //     str = str.replaceAll("{{BASE1}}", div1);
+  //   }
+  //   console.log(str);
+ 
+  //   return str;
+  // };
 
   const civilizationDetail = (civObj: Civilization) => {
     return (
@@ -39,12 +37,7 @@ export default function MyComponent() {
             {(item, i) => (
               <li
                 class="my-2"
-                innerHTML={renderedStatement(
-                  item.statement,
-                  multiplier(),
-                  item.base,
-                  item.base1
-                )}
+                innerHTML={item.statement}
               ></li>
             )}
           </For>
@@ -56,12 +49,7 @@ export default function MyComponent() {
             {(item, i) => (
               <li
                 class="my-2"
-                innerHTML={renderedStatement(
-                  item.statement,
-                  multiplier(),
-                  item.base,
-                  item.base1
-                )}
+                innerHTML={item.statement}
               ></li>
             )}
           </For>
@@ -73,7 +61,7 @@ export default function MyComponent() {
   return (
     <>
       <div class="flex gap-8">
-        <For each={civsObj()}>
+        <For each={civsData()}>
           {(civ, index) => (
             <div
               class={`relative w-full p-8 rounded-xl  ${
@@ -86,7 +74,7 @@ export default function MyComponent() {
                   My civilization
                 </h2>
               ) : undefined}
-              <div>{civilizationDetail(civ)}</div>
+              <div>{civ.myCiv} {civilizationDetail(civ)}</div>
             </div>
           )}
         </For>

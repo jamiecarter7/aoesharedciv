@@ -1,5 +1,5 @@
 import { For } from "solid-js";
-import { selectedCivs } from "./civSelect";
+import { selectedCivs } from "./civStore";
 
 export default function MyComponent() {
   return (
@@ -8,7 +8,7 @@ export default function MyComponent() {
         <For each={selectedCivs()}>
           {(civ) => (
             <div class="bg-indigo-700 flex items-center text-sm">
-              <div class="px-2.5 capitalize font-semibold">{civ}</div>
+              <div class="px-2.5 capitalize font-semibold">{civ.name}</div>
               <button class="blockflex items-center justify-center text-xs font-semibold bg-white/20 w-7 h-7">X</button>
             </div>
           )}

@@ -5,58 +5,77 @@
             "infantry",
             "monk"
         ],
-        "strategy": [
-            { "statement": "Strong eles - bonus vs skirmishers" },
-            { "statement": "Build TC's in castle age before imp", "task": "self"},
-            { "statement": "Age up ASAP for fast economy for whole team" },
-            { "statement": "Strong eles - bonus vs skirmishers" }
+        "uniqueUnit": [
+            {
+                "name": "Jaguar Warrior",
+                "type": "infantry"
+            }
         ],
-        "synergies" : ["tc", "eles", "monks"],
-        "weakness" : [],
-        "beats": [],
         "economy": [
             {
                 "statement": "Villagers carry +{{BASE}}",
                 "base": 3,
-                "type": "base"
+                "type": "base",
+                "stage": "early"
             },
             {
                 "statement": "+{{BASE}} Monk hit points for each Monastery technology",
                 "base": 5,
-                "type": "base"
+                "type": "base",
+                "stage": "late"
             },
             {
                 "statement": "Start with +{{BASE}} gold",
                 "base": 50,
-                "type": "base"
+                "type": "base",
+                "stage": "early"
             },
             {
                 "statement": "Relics generate +{{BASE}}% gold",
                 "base": 33,
-                "type": "team"
+                "type": "team",
+                "stage": "mid"
             }
         ],
         "military": [
             {
                 "statement": "Military units created {{BASE}}% faster",
                 "base": 11,
-                "type": "base"
-            },
-            {
-                "statement": "Start with +{{BASE}} gold",
-                "base": 50,
-                "type": "base"
+                "type": "base",
+                "stage": "late"
             },
             {
                 "statement": "Atlatl (Skirmishers +{{BASE}} attack, +{{BASE}} range)",
                 "base": 1,
-                "type": "unqiue"
+                "type": "unqiue",
+                "stage": "mid"
             },
             {
                 "statement": "Garland Wars (+{{BASE}} infantry attack)",
                 "base": 4,
-                "type": "unqiue"
+                "type": "unqiue",
+                "stage": "late"
             }
+        ],
+        "statements": [
+            {
+                "text": "Infantry have more attack (once researched garland wars)"
+            },
+            {
+                "text": "Relics generate more gold"
+            },
+            {
+                "text": "Skirmishers have more attack and range"
+            },
+            {
+                "text": "Monks have more HP"
+            }
+        ],
+        "synergies": [
+            "monks",
+            "skirmishers",
+            "infantry",
+            "relics"
         ]
     },
     {
@@ -69,34 +88,40 @@
             {
                 "statement": "Town Centers spawn {{BASE}} Villagers when the next Age is reached",
                 "base": 2,
-                "type": "base"
+                "type": "base",
+                "stage": "early"
             },
             {
                 "statement": "Mahayana (Villagers and Monks take {{BASE}}% less population space)",
                 "base": 10,
-                "type": "unique"
+                "type": "unique",
+                "stage": "late"
             },
             {
                 "statement": "Trade units yield {{BASE}}% food in addition to gold",
                 "base": 10,
-                "type": "team"
+                "type": "team",
+                "stage": "mid"
             }
         ],
         "military": [
             {
                 "statement": "Elephant units receive {{BASE}}% less bonus damage and are more resistant to conversion",
                 "base": 25,
-                "type": "base"
+                "type": "base",
+                "stage":"late"
             },
             {
                 "statement": "Cavalry {{BASE}} attack vs. Skirmishers",
                 "base": 2,
-                "type": "base"
+                "type": "base",
+                "stage":"none"
             },
             {
                 "statement": "Ships regenerate {{BASE}} HP per minute",
                 "base": 15,
-                "type": "base"
+                "type": "base",
+                "stage": "none"
             },
             {
                 "statement": "Monks +{{BASE}}/+{{BASE}}P armor",
@@ -106,129 +131,168 @@
             {
                 "statement": "Paiks (Rathas and elephant units attack {{BASE}}% faster)",
                 "base": 20,
-                "type": "unique"
+                "type": "unique",
+                "stage": "late"
             }
+        ],
+        "statements": [
+            {
+                "text": "Trade units yield food"
+            },
+            {
+                "text": "Elephants attack faster and take less bonus damage"
+            },
+            {
+                "text": "Villagers and monks take less population space"
+            }
+        ],
+        "synergies": [
+            "elephants",
+            "monks",
+            "trade"
         ]
     },
     {
         "civilization": "berbers",
-        "type": ["cavalry", "naval"],
+        "type": [
+            "cavalry",
+            "naval"
+        ],
         "economy": [
             {
                 "statement": "Villagers move {{BASE}}% faster in Dark Age, {{BASE1}}% starting in Feudal Age",
                 "base": 5,
                 "base1": 10,
-                "type": "base"
+                "type": "base",
+                "stage": "early"
             },
             {
                 "statement": "Stable units cost {{BASE}}% in Castle, {{BASE1}}% in Imperial Age",
                 "base": -15,
                 "base1": -20,
-                "type": "base"
+                "type": "base",
+                "stage":"late"
             }
         ],
         "military": [
             {
                 "statement": "Ships move {{BASE}}% faster",
                 "base": 10,
-                "type": "base"
+                "type": "base",
+                "stage": "none"
             },
             {
                 "statement": "Kasbah (team castles work {{BASE}}% faster)",
                 "base": 25,
-                "type": "unique"
+                "type": "unique",
+                "stage": "late"
             },
             {
                 "statement": "Maghrebi Camels (Camel units regenerate)",
                 "base": 0,
-                "type": "unique"
+                "type": "unique",
+                "stage": "mid"
             },
             {
                 "statement": "Genitour available in the Archery Range starting in the Castle Age",
                 "base": 0,
-                "type": "team"
-            }            
+                "type": "team",
+                "stage": "mid"
+            }
         ]
     },
     {
         "civilization": "bohemians",
-        "type": ["gunpower", "monk"],
+        "type": [
+            "gunpower",
+            "monk"
+        ],
         "economy": [
             {
-                "statement": "Blacksmiths and Universities cost {{BASE}} wood", 
+                "statement": "Blacksmiths and Universities cost {{BASE}} wood",
                 "base": 0,
-                "type": "base"
+                "type": "base",
+                "stage": "mid"
             },
             {
-                "statement": "[Fervor] and [Sanctity] affect Villagers", 
-                "type": "base"
+                "statement": "[Fervor] and [Sanctity] affect Villagers",
+                "type": "base",
+                "stage": "late"
             },
             {
-                "statement": "Mining Camp technologies free", 
-                "type": "base"
+                "statement": "Mining Camp technologies free",
+                "type": "base",
+                "stage": "early"
             },
-
             {
                 "statement": "Hussite Reforms (Monks and Monastery technologies have their gold cost replaced by food)",
-                "type": "unique"
+                "type": "unique",
+                "stage": "none"
             },
             {
-                "statement": "Markets work {{BASE}}% faster", 
+                "statement": "Markets work {{BASE}}% faster",
                 "base": 80,
-                "type": "team"
+                "type": "team",
+                "stage": "mid"
             }
         ],
         "military": [
             {
                 "statement": "Chemistry and Hand Cannoneer available in Castle Age",
-                "type": "base"
+                "type": "base",
+                "stage": "late"
             },
             {
-                "statement": "Spearman-line deals +{{BASE}}% bonus damage", 
+                "statement": "Spearman-line deals +{{BASE}}% bonus damage",
                 "base": 25,
-                "type": "base"
+                "type": "base",
+                "stage": "mid"
             },
             {
-                "statement": "Wagenburg Tactics (Gunpowder units move {{BASE}}% faster)", 
+                "statement": "Wagenburg Tactics (Gunpowder units move {{BASE}}% faster)",
                 "base": 15,
-                "type": "unique"
+                "type": "unique",
+                "stage": "late"
             }
         ]
     },
     {
         "civilization": "britons",
-        "type": ["foot archer"],
+        "type": [
+            "foot archer"
+        ],
         "economy": [
             {
-                "statement": "Town Centers cost {{BASE}} wood starting in the Castle Age", 
+                "statement": "Town Centers cost {{BASE}} wood starting in the Castle Age",
                 "base": 0,
-                "type": "base"
+                "type": "base",
+                "stage": "late"
             },
             {
-                "statement": "Shepherds work {{BASE}}% faster", 
+                "statement": "Shepherds work {{BASE}}% faster",
                 "base": 25,
                 "type": "base"
             }
         ],
         "military": [
             {
-                "statement": "Foot archers (except skirmishers) +{{BASE}} range in Castle and Imperial Age (+{{BASE1}} total)", 
+                "statement": "Foot archers (except skirmishers) +{{BASE}} range in Castle and Imperial Age (+{{BASE1}} total)",
                 "base": 1,
                 "base1": 2,
                 "type": "base"
             },
             {
-                "statement": "Yeomen (+{{BASE}} foot archer range +{{BASE1}} tower attack)", 
+                "statement": "Yeomen (+{{BASE}} foot archer range +{{BASE1}} tower attack)",
                 "base": 1,
                 "base1": 2,
                 "type": "unique"
             },
             {
-                "statement": "Warwolf (Trebuchets do blast damage)", 
+                "statement": "Warwolf (Trebuchets do blast damage)",
                 "type": "unique"
             },
             {
-                "statement": "Archery Ranges work {{BASE}}% faster", 
+                "statement": "Archery Ranges work {{BASE}}% faster",
                 "base": 10,
                 "type": "team"
             }
@@ -236,43 +300,45 @@
     },
     {
         "civilization": "bulgarians",
-        "type": ["infantry", "cavalry"],
+        "type": [
+            "infantry",
+            "cavalry"
+        ],
         "economy": [
             {
-                "statement": "Town Centers cost {{BASE}} stone", 
+                "statement": "Town Centers cost {{BASE}} stone",
                 "base": -50,
                 "cost": 100,
                 "type": "base"
             },
             {
-                "statement": "Blacksmith and Siege Workshop technologies cost {{BASE}} food", 
+                "statement": "Blacksmith and Siege Workshop technologies cost {{BASE}} food",
                 "base": -50,
                 "cost": 100,
                 "type": "base"
             },
-
             {
-                "statement": "Blacksmiths work {{BASE}}% faster", 
+                "statement": "Blacksmiths work {{BASE}}% faster",
                 "base": 80,
                 "type": "team"
             }
         ],
         "military": [
             {
-                "statement": "Militia-line upgrades free", 
+                "statement": "Militia-line upgrades free",
                 "type": "base"
             },
             {
-                "statement": "Can build Krepost", 
+                "statement": "Can build Krepost",
                 "type": "base"
             },
             {
-                "statement": "Stirrups (Cavalry attack {{BASE}}% faster)", 
+                "statement": "Stirrups (Cavalry attack {{BASE}}% faster)",
                 "base": 33,
                 "type": "unique"
             },
             {
-                "statement": "Bagains (Militia-line gains +{{BASE}} armor)", 
+                "statement": "Bagains (Militia-line gains +{{BASE}} armor)",
                 "base": 5,
                 "type": "unique"
             }
@@ -280,15 +346,17 @@
     },
     {
         "civilization": "burgundians",
-        "type": ["cavalry"],
+        "type": [
+            "cavalry"
+        ],
         "economy": [
             {
-                "statement": "Economic upgrades available one age earlier and cost {{BASE}}% food", 
+                "statement": "Economic upgrades available one age earlier and cost {{BASE}}% food",
                 "base": -33,
                 "type": "base"
             },
             {
-                "statement": "Stable technologies cost {{BASE}}%", 
+                "statement": "Stable technologies cost {{BASE}}%",
                 "base": -50,
                 "type": "base"
             },
@@ -297,7 +365,7 @@
                 "type": "unique"
             },
             {
-                "statement": "Relics generate both Gold & Food", 
+                "statement": "Relics generate both Gold & Food",
                 "type": "team"
             }
         ],
@@ -312,228 +380,2511 @@
                 "type": "base"
             },
             {
-                "statement": "Flemish Revolution (Upgrades all existing Villagers to Flemish Militia; create Flemish Militia at Barracks)", 
+                "statement": "Flemish Revolution (Upgrades all existing Villagers to Flemish Militia; create Flemish Militia at Barracks)",
                 "base": -50,
                 "cost": 100,
                 "type": "unique"
             }
-
         ]
     },
     {
         "civilization": "burmese",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "monk",
+            "elephant"
+        ],
+        "economy": [
+            {
+                "statement": "Lumber Camp technologies free",
+                "type": "base"
+            },
+            {
+                "statement": "Monastery technologies cost {{BASE}}%",
+                "base": -50,
+                "type": "base"
+            },
+            {
+                "statement": "Relics visible on the map at the start of the game",
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Infantry +{{BASE}} attack per age (starting in the Feudal Age)",
+                "base": 1,
+                "type": "base"
+            },
+            {
+                "statement": "Battle Elephants +{{BASE}}/+{{BASE}}P armor",
+                "base": 1,
+                "type": "base"
+            },
+            {
+                "statement": "Manipur Cavalry (Cavalry +{{BASE}} attack vs. archers)",
+                "base": 4,
+                "type": "unique"
+            },
+            {
+                "statement": "Howdah (Battle Elephants +{{BASE}}/+{{BASE}}P armor)",
+                "base": 1,
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Battle elephants have more armour"
+            },
+            {
+                "text": "Infantry have more attack per age (starting in feudal)"
+            },
+            {
+                "text": "Monastery techs cost less"
+            },
+            {
+                "text": "Lumber camp techs are free"
+            },
+            {
+                "text": "Relics are visible on the map"
+            },
+            {
+                "text": "Cavalry stronger vs archers"
+            }
+
+        ],
+        "synergies": [
+            "infantry",
+            "battle elephants",
+            "monks",
+            "lumberjacks",
+            "relics",
+            "cavalry"
+        ]
     },
     {
         "civilization": "byzantines",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "defensive"
+        ],
+        "economy": [
+            {
+                "statement": "Advance to Imperial Age costs {{BASE}}%",
+                "base": -33,
+                "type": "base"
+            },
+            {
+                "statement": "Town Watch, Town Patrol free",
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Buildings +{{BASE}}% HP Dark, +{{BASE1}}% Feudal, +{{BASE2}}% Castle, +{{BASE3}% Imperial Age",
+                "base": 10,
+                "base1": 20,
+                "base2": 30,
+                "base3": 40,
+                "type": "base"
+            },
+            {
+                "statement": "Camel Riders, Skirmishers, Pikemen, Halberdiers cost {{BASE}}%",
+                "base": -25,
+                "type": "base"
+            },
+            {
+                "statement": "Fire Ships and Dromons attack {{BASE}}% faster",
+                "base": 25,
+                "type": "base"
+            },
+            {
+                "statement": "Greek Fire (Fire Ships +{{BASE}} range; Dromon and Bombard Tower blast radius increased)",
+                "base": 1,
+                "type": "unique"
+            },
+            {
+                "statement": "Logistica (Cataphracts cause trample damage)",
+                "type": "unique"
+            },
+            {
+                "statement": "Monks +{{BASE}}% heal speed",
+                "base": 100,
+                "type": "base"
+            }
+        ],
+        "strategy": [
+            {
+                "statement": "Rush imperial age - imperial age upgrade is free",
+                "task": "self"
+            },
+            {
+                "statement": "Research 'Elite Cataphract' and 'Logistica'",
+                "task": "self"
+            },
+            {
+                "statement": "Inform whole team that imperial age upgrade is free"
+            },
+            {
+                "statement": "Monks have crazy heal"
+            }
+        ],
+        "synergies": [
+            "age upgrade",
+            "monks"
+        ]
     },
     {
         "civilization": "celts",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "infantry",
+            "seige"
+        ],
+        "economy": [
+            {
+                "statement": "Lumberjacks work {{BASE}}% faster",
+                "base": 15,
+                "type": "base"
+            },
+            {
+                "statement": "Can steal sheep, and sheep within one Celt unit's LoS cannot be stolen",
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Infantry move {{BASE}}% faster (starting in the Feudal Age)",
+                "base": 15,
+                "type": "base"
+            },
+            {
+                "statement": "Siege weapons fire {{BASE}}% faster",
+                "base": 25,
+                "type": "base"
+            },
+            {
+                "statement": "Stronghold (Castles and towers fire {{BASE}}% faster; Castles heal allied infantry in a {{BASE1}} tile radius)",
+                "base": 33,
+                "base1": 7,
+                "type": "unique"
+            },
+            {
+                "statement": "Furor Celtica (Siege Workshop units +{{BASE}}% HP)",
+                "base": 40,
+                "type": "unique"
+            },
+            {
+                "statement": "Siege Workshops work {{BASE}}% faster",
+                "base": 20,
+                "type": "team"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Infantry move faster"
+            },
+            {
+                "text": "Siege weapons fire faster"
+            },
+            {
+                "text": "Siege workshops work faster"
+            }
+        ],
+        "synergies": [
+            "infantry",
+            "siege",
+            "lumberjacks"
+        ]
     },
     {
         "civilization": "chinese",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "archer"
+        ],
+        "uniqueUnit": {
+            "name": "Chu Ko Nu",
+            "type": "archer"
+        },
+        "economy": [
+            {
+                "statement": "Start with +{{BASE}} villagers, {{BASE1}} wood, {{BASE2}} food",
+                "base": 3,
+                "base1": -50,
+                "base2": -200,
+                "type": "base"
+            },
+            {
+                "statement": "Technologies cost {{BASE}}% Feudal, {{BASE1}}% Castle, {{BASE2}}% Imperial Age",
+                "base": -5,
+                "base1": -10,
+                "base2": -15,
+                "type": "base"
+            },
+            {
+                "statement": "Town Centers support {{BASE}} population and +{{BASE1}} LOS",
+                "base": 10,
+                "base1": 5,
+                "type": "base"
+            },
+            {
+                "statement": "Farms +{{BASE}}% food",
+                "base": 10,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Demolition ships +{{BASE}}% hit points",
+                "base": 50,
+                "type": "base"
+            },
+            {
+                "statement": "Great Wall (Walls and towers +{{BASE}}% HP)",
+                "base": 30,
+                "type": "unique"
+            },
+            {
+                "statement": "Rocketry (Chu Ko Nu +{{BASE}}, scorpions +{{BASE1}} attack)",
+                "base": 2,
+                "base1": 4,
+                "type": "unique"
+            }
+        ],
+        "strategy": [
+            {
+                "text": "Build walls to block enemy"
+            },
+            {
+                "text": "Build lots of towers"
+            },
+            {
+                "text": "Build lots of Chu Ko Nu"
+            }
+        ]
     },
     {
         "civilization": "cumans",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "cavalry"
+        ],
+        "uniqueUnit": {
+            "name": "Kipchak",
+            "type": "cavalry archer"
+        },
+        "economy": [
+            {
+                "statement": "Additional Town Center can be built in the Feudal Age",
+                "type": "base"
+            },
+            {
+                "statement": "Siege Workshop and Battering Ram available in the Feudal Age; Capped Ram upgrade available in Castle Age",
+                "type": "base"
+            },
+            {
+                "statement": "Archery Ranges and Stables cost -{{BASE}} wood",
+                "base": 75,
+                "type": "base"
+            },
+            {
+                "statement": "Cavalry {{BASE}}% faster each age (starting in Feudal Age)",
+                "base": 5,
+                "type": "base"
+            },
+            {
+                "statement": "Steppe Husbandry (Light Cavalry, Steppe Lancers and Cavalry Archers trained {{BASE}}% faster)",
+                "base": 100,
+                "type": "unique"
+            },
+            {
+                "statement": "Cuman Mercenaries (team members can create {{BASE}} free Elite Kipchaks per Castle)",
+                "base": 5,
+                "type": "unique"
+            },
+            {
+                "statement": "Palisade Walls +{{BASE}}% HP",
+                "base": 33,
+                "type": "team"
+            }
+        ],
+        "military": [],
+        "strategy": [
+            {
+                "text": "Can build extra TC in fuedal"
+            }
+        ],
+        "synergies": [
+            "palisade"
+        ]
     },
     {
         "civilization": "dravidians",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "infantry",
+            "naval"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Urumi Swordsman",
+                "type": "infantry"
+            },
+            {
+                "statement": "Thirisadai",
+                "type": "warship"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Receive {{BASE}} wood when advancing to the next age",
+                "base": 200,
+                "type": "base"
+            },
+            {
+                "statement": "Fishermen and Fishing Ships carry {{BASE}} more",
+                "base": 15,
+                "type": "base"
+            },
+            {
+                "statement": "Docks provide {{BASE}} extra population room",
+                "base": 5,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Barracks technologies cost {{BASE}}%",
+                "base": -50,
+                "type": "base"
+            },
+            {
+                "statement": "Siege weapons cost {{BASE}}% wood",
+                "base": -33,
+                "type": "base"
+            },
+            {
+                "statement": "Skirmishers and Elephant Archers attack {{BASE}}% faster",
+                "base": 25,
+                "type": "base"
+            },
+            {
+                "statement": "Medical Corps (Elephant units regenerate {{BASE}} HP per minute)",
+                "base": 30,
+                "type": "team"
+            },
+            {
+                "statement": "Wootz Steel (Infantry and cavalry attacks ignore armor)",
+                "type": "unique"
+            }
+        ],
+        "strategy": [
+            {
+                "text": "Elephants heal 5HP per second"
+            },
+            {
+                "text": "Infantry and cavalry attacks ignore armour"
+            },
+            {
+                "text": "skirmishers and elelphant archers attack faster"
+            }
+        ],
+        "synergies": [
+            "skirmishers",
+            "elephants",
+            "cavalry",
+            "seige"
+        ]
     },
     {
         "civilization": "ethiopians",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "archer"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Shotel Warrior",
+                "type": "infantry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Receive {{BASE}} gold, {{BASE1}} food when advancing to the next age",
+                "base": 100,
+                "base1": 100,
+                "type": "base"
+            },
+            {
+                "statement": "Outposts have +{{BASE}} line of sight and cost no stone",
+                "base": 3,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Archers fire {{BASE}}% faster",
+                "base": 18,
+                "type": "base"
+            },
+            {
+                "statement": "Pikeman upgrade free",
+                "type": "base"
+            },
+            {
+                "statement": "Royal Heirs (Shotel Warriors and Camel units receive {{BASE}} damage less from mounted units)",
+                "base": -3,
+                "type": "unique"
+            },
+            {
+                "statement": "Torsion Engines (increases blast radius of Siege Workshop units)",
+                "type": "unique"
+            }
+        ],
+        "statements": [],
+        "synergies": [
+            "camels",
+            "archers",
+            "seige"
+        ]
     },
     {
         "civilization": "franks",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "cavalry"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Throwing axemen",
+                "type": "infantry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Mill technologies free",
+                "type": "base"
+            },
+            {
+                "statement": "Foragers work {{BASE}}% faster",
+                "base": 15,
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Castles cost {{BASE}}% in Castle, {{BASE1}}% in Imperial Age",
+                "base": -15,
+                "base1": -25,
+                "type": "base"
+            },
+            {
+                "statement": "Cavalry {{BASE}}% more hit points starting in Feudal Age",
+                "base": 20,
+                "type": "base"
+            },
+            {
+                "statement": "Bearded Axe (+{{BASE}} Throwing Axemen range)",
+                "base": 1,
+                "type": "unique"
+            },
+            {
+                "statement": "Chivalry (Stables work {{BASE}}% faster)",
+                "base": 40,
+                "type": "unique"
+            },
+            {
+                "statement": "Knights +{{BASE}} line of sight",
+                "base": 2,
+                "type": "team"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Forage for food!"
+            },
+            {
+                "text": "Axemen have long range"
+            }
+        ],
+        "synergies": [
+            "castles",
+            "foragers"
+        ]
     },
     {
         "civilization": "goths",
         "type": [],
-        "economy": [],
-        "military": []
+        "economy": [
+            {
+                "statement": "Villagers +{{BASE}} attack vs. wild boar; hunters carry {{BASE1}} more meat; hunt lasts {{BASE2}}% longer",
+                "base": 5,
+                "base1": 15,
+                "base2": 20,
+                "type": "base"
+            },
+            {
+                "statement": "Loom can be researched instantly",
+                "type": "base"
+            },
+            {
+                "statement": "+{{BASE}} population in Imperial Age",
+                "base": 10,
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Infantry cost {{BASE}}% in Dark, {{BASE1}}% in Feudal, {{BASE2}}% in Castle, {{BASE3}}% in Imperial Age",
+                "base": -20,
+                "base1": -25,
+                "base2": -30,
+                "base3": -35,
+                "type": "base"
+            },
+            {
+                "statement": "Infantry +{{BASE}} attack vs. buildings per age (starting from Feudal Age)",
+                "base": 1,
+                "type": "base"
+            },
+            {
+                "statement": "Anarchy (create Huskarls at Barracks)",
+                "type": "unique"
+            },
+            {
+                "statement": "Perfusion (Barracks work {{BASE}}% faster)",
+                "base": 100,
+                "type": "unique"
+            },
+            {
+                "statement": "Barracks work {{BASE}}% faster",
+                "base": 20,
+                "type": "team"
+            }
+        ],
+        "statement": [
+            {
+                "text": "Instant Loom"
+            },
+            {
+                "text": "Hunting lasts longer!"
+            }
+        ],
+        "synergies": [
+            "infantry",
+            "hunting"
+        ]
     },
     {
         "civilization": "gurjaras",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "cavalry",
+            "camel"
+        ],
+        "economy": [
+            {
+                "statement": "Start with {{BASE}} Forage Bushes",
+                "base": 2,
+                "type": "base"
+            },
+            {
+                "statement": "Can garrison Mills with livestock to produce food",
+                "type": "base"
+            },
+            {
+                "statement": "Can garrison Docks with Fishing Ships",
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Mounted units deal +{{BASE}}% bonus damage in Feudal, +{{BASE1}}% in Castle, +{{BASE2}}% in Imperial Age",
+                "base": 20,
+                "base1": 30,
+                "base2": 40,
+                "type": "base"
+            },
+            {
+                "statement": "Kshatriyas (Military units cost {{BASE}}% less food)",
+                "base": -25,
+                "type": "unique"
+            },
+            {
+                "statement": "Frontier Guards (Camel Riders and Elephant Archers +{{BASE}} melee armor)",
+                "base": 4,
+                "type": "unique"
+            },
+            {
+                "statement": "Camel and elephant units created {{BASE}}% faster",
+                "base": 25,
+                "type": "team"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Garrision livestock in mills for food"
+            }
+        ],
+        "synergies": [
+            "mounted",
+            "cavalry",
+            "camels",
+            "elephant archers"
+        ]
     },
     {
         "civilization": "hindustanis",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "camel",
+            "gunpower"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Ghulam",
+                "type": "infantry"
+            },
+            {
+                "statement": "Imperial Camel Rider",
+                "type": "camel rider"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Villagers cost {{BASE}}% in Dark, {{BASE1}}% in Feudal, {{BASE2}}% in Castle, {{BASE3}}% in Imperial Age",
+                "base": -5,
+                "base1": -10,
+                "base2": -15,
+                "base3": -20,
+                "type": "base"
+            },
+            {
+                "statement": "Can build Caravanserai in Imperial Age",
+                "type": "base"
+            },
+            {
+                "statement": "Grand Trunk Road (All gold income {{BASE}}% faster; trading fee reduced to {{BASE1}}%)",
+                "base": 10,
+                "base1": 10,
+                "type": "unique"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Camel Riders attack {{BASE}}% faster",
+                "base": 20,
+                "type": "base"
+            },
+            {
+                "statement": "Gunpowder units +{{BASE}}/+{{BASE1}}P armor",
+                "base": 1,
+                "base1": 1,
+                "type": "base"
+            },
+            {
+                "statement": "Shatagni (Hand Cannoneers +{{BASE}} range)",
+                "base": 2,
+                "type": "unique"
+            },
+            {
+                "statement": "Camel and light cavalry units +{{BASE}} attack vs. buildings",
+                "base": 2,
+                "type": "team"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Cheap villagers"
+            },
+            {
+                "text": "Camels attack faster"
+            },
+            {
+                "text": "Gunpower units havestrong armour"
+            },
+            {
+                "text": "Handcannoneers have long range"
+            }
+        ],
+        "synergies": [
+            "camels",
+            "elephant archers",
+            "gunpowder",
+            "handcannoneers"
+        ]
     },
     {
         "civilization": "huns",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "cavalry"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Tarkan",
+                "type": "cavalry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Do not need houses, but start with {{BASE}} wood",
+                "base": -100,
+                "type": "base"
+            },
+            {
+                "statement": "Atheism (+{{BASE}} years Relic, Wonder victories; enemy relics generate {{BASE1}}% resources)",
+                "base": 100,
+                "base1": -50,
+                "type": "unique"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Cavalry Archers cost {{BASE}}% in Castle, {{BASE1}}% in Imperial Age",
+                "base": -10,
+                "base1": -20,
+                "type": "base"
+            },
+            {
+                "statement": "Trebuchets +{{BASE}}% accuracy",
+                "base": 30,
+                "type": "base"
+            },
+            {
+                "statement": "Marauders (Create Tarkans at stables)",
+                "type": "unique"
+            },
+            {
+                "statement": "Stables work {{BASE}}% faster",
+                "base": 20,
+                "type": "team"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Cheap cavalry archers"
+            },
+            {
+                "text": "Trebuchets very accurate"
+            }
+        ],
+        "synergies": [
+            "cavalry archers",
+            "trebuchets"
+        ]
     },
     {
         "civilization": "incas",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "infantry"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Kamayuk",
+                "type": "infantry"
+            },
+            {
+                "name": "Slinger",
+                "tyep": "archer"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Villagers affected by Blacksmith upgrades starting in the Castle Age",
+                "type": "base"
+            },
+            {
+                "statement": "Houses support {{BASE}} population",
+                "base": 10,
+                "type": "base"
+            },
+            {
+                "statement": "Buildings cost {{BASE}}% stone",
+                "base": -15,
+                "type": "base"
+            },
+            {
+                "statement": "Start with a free Llama",
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Military units food cost {{BASE}}% in Dark, {{BASE1}}% in Feudal, {{BASE2}}% in Castle, {{BASE3}}% in Imperial Age",
+                "base": -15,
+                "base1": -20,
+                "base2": -25,
+                "base3": -30,
+                "type": "base"
+            },
+            {
+                "statement": "Andean Sling (Skirmishers and Slingers no minimum range; Slingers +{{BASE}} attack)",
+                "base": 1,
+                "type": "unique"
+            },
+            {
+                "statement": "Fabric Shields (Kamayuks, Slingers, Eagles +{{BASE}}/+{{BASE1}}P armor)",
+                "base": 1,
+                "base1": 2,
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Houses support 10x multipler population"
+            },
+            {
+                "text": "Buildings cost no stone"
+            },
+            {
+                "text": "Kamayuks, Slingers and Eagles strong armour"
+            }
+        ],
+        "synergies": [
+            "eagles",
+            "infantry",
+            "skirmishers"
+        ]
     },
     {
         "civilization": "italians",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "archer",
+            "naval"
+        ],
+        "economy": [
+            {
+                "statement": "Advancing to the next age costs {{BASE}}%",
+                "base": -15,
+                "type": "base"
+            },
+            {
+                "statement": "Dock and University technologies cost {{BASE}}%",
+                "base": -33,
+                "type": "base"
+            },
+            {
+                "statement": "Fishing Ships cost {{BASE}}%",
+                "base": -15,
+                "type": "base"
+            },
+            {
+                "statement": "Silk Road (trade units cost {{BASE}}%)",
+                "base": -50,
+                "type": "unique"
+            },
+            {
+                "statement": "Condottiero available in the Barracks in Imperial Age",
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Gunpowder units cost {{BASE}}%",
+                "base": -20,
+                "type": "base"
+            },
+            {
+                "statement": "Pavise (foot archers and Condottieri +{{BASE}} armor/+{{BASE1}} pierce armor)",
+                "base": 1,
+                "base1": 1,
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Free to advance to next age"
+            },
+            {
+                "text": "Free university technologies"
+            },
+            {
+                "text": "Free/cheap gunpower units"
+            },
+            {
+                "text": "Foot archers and Condottieri have strong armour with Pavise (Castle age)"
+            },
+            {
+                "text": "Free trade units with Silk Road (imperial age)"
+            }
+        ],
+        "synergies": [
+            "foot archers",
+            "gunpowder",
+            "trade"
+        ]
     },
     {
         "civilization": "japanese",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "infantry"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Samurai",
+                "type": "infantry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Fishing Ships {{BASE}}x hit points; +{{BASE1}}P armor; work rate {{BASE2}}% Dark, {{BASE3}}% Feudal, {{BASE4}}% Castle, {{BASE5}}% Imperial Age",
+                "base": 2,
+                "base1": 2,
+                "base2": 5,
+                "base3": 10,
+                "base4": 15,
+                "base5": 20,
+                "type": "base"
+            },
+            {
+                "statement": "Mill, Lumber/Mining Camps cost {{BASE}}%",
+                "base": -50,
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Infantry attack {{BASE}}% faster starting in Feudal Age",
+                "base": 33,
+                "type": "base"
+            },
+            {
+                "statement": "Yasama (Towers shoot extra arrows)",
+                "type": "unique"
+            },
+            {
+                "statement": "Kataparuto (Trebuchets fire, pack faster)",
+                "type": "unique"
+            },
+            {
+                "statement": "Galleys +{{BASE}}% line of sight",
+                "base": 50,
+                "type": "team"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Infantry attack faster from fuedal"
+            }
+        ],
+        "synergies": [
+            "fishing",
+            "trebuchets",
+            "infantry",
+            "arrow towers"
+        ]
     },
     {
         "civilization": "khmer",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "seige",
+            "elephant"
+        ],
+        "uniqueUnit": [
+            {
+                "statement": "Ballista Elephant",
+                "type": "mounted scorpion"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "No buildings required to advance to the next age or to unlock other buildings",
+                "type": "base"
+            },
+            {
+                "statement": "Farmers don't require Mills/Town Centers to drop off food",
+                "type": "base"
+            },
+            {
+                "statement": "Villagers can garrison in Houses",
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Battle Elephants move {{BASE}}% faster",
+                "base": 10,
+                "type": "base"
+            },
+            {
+                "statement": "Tusk Swords (Battle Elephants +{{BASE}} attack)",
+                "base": 3,
+                "type": "unique"
+            },
+            {
+                "statement": "Double Crossbow (Ballista Elephants and Scorpions fire two projectiles)",
+                "type": "unique"
+            },
+            {
+                "statement": "Scorpions +{{BASE}} range",
+                "base": 1,
+                "type": "team"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Can advance without required buildings (just need resources)"
+            },
+            {
+                "text": "Farmers don't need to drop at mill"
+            },
+            {
+                "text": "Fast moving and high damage 'Battle elephants'"
+            },
+            {
+                "text": "Scorpions (and ballista elephants fire multiple projectiles"
+            }
+        ],
+        "synergies": [
+            "battle elephants",
+            "scorpions"
+        ]
     },
     {
         "civilization": "koreans",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "defensive",
+            "naval"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "War Wagon",
+                "type": "cavalry archer"
+            },
+            {
+                "name": "Turtle Ship",
+                "type": "war ship"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Villagers +{{BASE}} line of sight",
+                "base": 3,
+                "type": "base"
+            },
+            {
+                "statement": "Stone miners work {{BASE}}% faster",
+                "base": 20,
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Archer Armor and Tower upgrades free (Bombard Tower requires Chemistry)",
+                "type": "base"
+            },
+            {
+                "statement": "Archers and Infantry cost -{{BASE}}% wood",
+                "base": 50,
+                "type": "base"
+            },
+            {
+                "statement": "Warships cost -{{BASE}}% wood",
+                "base": 20,
+                "type": "base"
+            },
+            {
+                "statement": "Eupseong (Watch Towers, Guard Towers and Keeps +{{BASE}} range)",
+                "base": 2,
+                "type": "unique"
+            },
+            {
+                "statement": "Shinkichon (Mangonel-line +{{BASE}} range)",
+                "base": 1,
+                "type": "unique"
+            },
+            {
+                "statement": "Mangonel-line minimum range reduced",
+                "type": "team"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Long range onagers"
+            },
+            {
+                "text": "Archers and infantry cost no wood"
+            }
+        ],
+        "synergies": [
+            "arrow towers",
+            "onager"
+        ]
     },
     {
         "civilization": "lithuanians",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "cavalry",
+            "monk"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Leitis",
+                "type": "cavalry"
+            },
+            {
+                "name": "Winged Hussar",
+                "type": "cavalry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Each Town Center provides {{BASE}} food",
+                "base": 100,
+                "type": "base"
+            },
+            {
+                "statement": "Monasteries work {{BASE}}% faster",
+                "base": 20,
+                "type": "team"
+            }
+        ],
+        "military": [],
+        "statements": [
+            {
+                "text": "New TCs give food boost"
+            },
+            {
+                "text": "Relics boost Knights and Leitis attack"
+            },
+            {
+                "statement": "Spearman-line and Skirmishers move {{BASE}}% faster",
+                "base": 10,
+                "type": "base"
+            },
+            {
+                "statement": "Each garrisoned relic gives +{{BASE}} attack to Knights and Leitis (maximum +4)",
+                "base": 1,
+                "type": "base"
+            },
+            {
+                "statement": "Hill Forts (Town Centers +{{BASE}} range)",
+                "base": 3,
+                "type": "unique"
+            },
+            {
+                "statement": "Tower Shields (Spearman-line and Skirmishers +{{BASE}}P armor)",
+                "base": 2,
+                "type": "unique"
+            }
+        ],
+        "synergies": [
+            "relic",
+            "skirmishers",
+            "spearman",
+            "pikeman",
+            "halberdier"
+        ]
     },
     {
         "civilization": "magyars",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "cavalry"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Magyar Huszar",
+                "type": "cavalry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Villagers kill wolves with 1 strike",
+                "type": "base"
+            },
+            {
+                "statement": "Forging, Iron Casting, Blast Furnace free",
+                "type": "base"
+            },
+            {
+                "statement": "Cavalry Archers created {{BASE}}% faster",
+                "base": 25,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Scout Cavalry, Light Cavalry, Hussar cost {{BASE}}%",
+                "base": -15,
+                "type": "base"
+            },
+            {
+                "name": "Corvinian Army (Magyar Huszars cost no gold)",
+                "type": "unique"
+            },
+            {
+                "statement": "Recurve Bow (Cavalry archers +{{BASE1}} range, +{{BASE2}} attack)",
+                "base1": 1,
+                "base2": 1,
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Don't need Loom"
+            },
+            {
+                "text": "Strong cavalry archers"
+            },
+            {
+                "text": "Free hussars"
+            }
+        ],
+        "synergies": [
+            "hussar",
+            "winged hussar",
+            "cavalry archers"
+        ]
     },
     {
         "civilization": "malay",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "naval"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Karambit Warrior",
+                "type": "infantry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Advancing to the next age {{BASE}}% faster",
+                "base": 66,
+                "type": "base"
+            },
+            {
+                "statement": "Fish Traps cost {{BASE}}% and provide {{BASE1}}X food",
+                "base": -33,
+                "base1": 3,
+                "type": "base"
+            },
+            {
+                "statement": "Docks +{{BASE}}% line of sight",
+                "base": 100,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Battle Elephants cost {{BASE}}% in Castle, {{BASE1}}% in Imperial Age",
+                "base": -30,
+                "base1": -40,
+                "type": "base"
+            },
+            {
+                "statement": "Infantry armor upgrades free",
+                "type": "base"
+            },
+            {
+                "statement": "Thalassocracy (upgrades Docks to Harbors, which fire arrows)",
+                "type": "unique"
+            },
+            {
+                "statement": "Forced Levy (Militia-line gold cost is replaced by additional food cost)",
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Advance to the next age instantly"
+            },
+            {
+                "text": "Free battle elephants"
+            },
+            {
+                "text": "Malitia-line only costs food",
+                "type": "unique"
+            }
+        ],
+        "synergies": [
+            "battle elephants",
+            "malitia"
+        ]
     },
     {
         "civilization": "malians",
         "type": [],
-        "economy": [],
-        "military": []
+        "uniqueUnit": [
+            {
+                "name": "Gbeto",
+                "type": "infantry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Buildings cost {{BASE}}% wood",
+                "base": -15,
+                "type": "base"
+            },
+            {
+                "statement": "Villagers drop off {{BASE}}% more gold",
+                "base": 10,
+                "type": "base"
+            },
+            {
+                "statement": "Universities work {{BASE}}% faster",
+                "base": 80,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Barracks units +{{BASE}}P armor per age (starting from Feudal Age)",
+                "base": 1,
+                "type": "base"
+            },
+            {
+                "statement": "Tigui (Town Centers fire arrows when ungarrisoned)",
+                "type": "unique"
+            },
+            {
+                "statement": "Farimba (Cavalry +{{BASE}} attack)",
+                "base": 5,
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Gold miners drop more gold"
+            },
+            {
+                "text": "Barracks units have more armor (from feudal)"
+            },
+            {
+                "text": "Cavalry has additional attack (after Farimba)"
+            }
+        ],
+        "synergies": [
+            "gold miners",
+            "barracks",
+            "cavalry"
+        ]
     },
     {
         "civilization": "mayans",
         "type": [],
-        "economy": [],
+        "uniqueUnit": [
+            {
+                "name": "Plumed Archer",
+                "type": "archer"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Start with +{{BASE}} villager, but {{BASE1}} food",
+                "base": 1,
+                "base1": -50,
+                "type": "base"
+            },
+            {
+                "statement": "Resources last {{BASE}}% longer",
+                "base": 15,
+                "type": "base"
+            },
+            {
+                "statement": "Archers cost {{BASE}}% Feudal, {{BASE1}}% Castle, {{BASE2}}% Imperial Age",
+                "base": -10,
+                "base1": -20,
+                "base2": -30,
+                "type": "base"
+            },
+            {
+                "statement": "Hul'che Javelineers (Skirmishers throw a second projectile)",
+                "type": "unique"
+            },
+            {
+                "statement": "El Dorado (Eagle Warriors have +{{BASE}} hit points)",
+                "base": 40,
+                "type": "unique"
+            },
+            {
+                "statement": "Walls cost {{BASE}}%",
+                "base": -50,
+                "type": "team"
+            }
+        ],
         "military": []
     },
     {
-        "civilization": "mongals",
-        "type": [],
-        "economy": [],
-        "military": []
+        "civilization": "mongols",
+        "type": [
+            "cavalry archer"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Mangudai",
+                "type": "cavalry archer"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Hunters work {{BASE}}% faster",
+                "base": 40,
+                "type": "base"
+            },
+            {
+                "statement": "Nomads (lost houses do not decrease population headroom)",
+                "type": "unique"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Cavalry archers fire {{BASE}}% faster",
+                "base": 25,
+                "type": "base"
+            },
+            {
+                "statement": "Light Cavalry, Hussars, Steppe Lancers +{{BASE}}% hit points",
+                "base": 30,
+                "type": "base"
+            },
+            {
+                "statement": "Drill (Siege Workshop units move {{BASE}}% faster)",
+                "base": 50,
+                "type": "unique"
+            },
+            {
+                "statement": "Scout Cavalry, Light Cavalry, Hussar +{{BASE}} line of sight",
+                "base": 2,
+                "type": "team"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Use hunting for fast food"
+            },
+            {
+                "text": "Cavalry archers fire faster"
+            },
+            {
+                "text": "Light cavalry, hussars and steppe lancers have more hit points"
+            },
+            {
+                "text": "Siege units move faster"
+            },
+            {
+                "text": "Late game can delete houses"
+            }
+        ],
+        "synergies": [
+            "cavalry archers",
+            "siege",
+            "hunting"
+        ]
     },
     {
         "civilization": "persians",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "cavalry"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "War Elephant",
+                "type": "cavalry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Start with +{{BASE}} wood, food",
+                "base": 50,
+                "type": "base"
+            },
+            {
+                "statement": "Town Center, Dock {{BASE}}x hit points; work rate +{{BASE1}}% Feudal, +{{BASE2}}% Castle, +{{BASE3}}% Imperial Age",
+                "base": 2,
+                "base1": 10,
+                "base2": 15,
+                "base3": 20,
+                "type": "base"
+            },
+            {
+                "statement": "Kamandaran (Archer-line gold cost is replaced by additional wood cost)",
+                "type": "unique"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Mahouts (War Elephants move {{BASE}}% faster)",
+                "base": 30,
+                "type": "unique"
+            },
+            {
+                "statement": "Knights +{{BASE}} attack vs. Archers",
+                "base": 2,
+                "type": "team"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Start with extra wood and food"
+            },
+            {
+                "text": "War elephants move faster"
+            },
+            {
+                "text": "Knights have attack bonus vs archers"
+            },
+            {
+                "text": "Archer-line only costs wood"
+            },
+            {
+                "text": "Town centers and docks have more hit points"
+            }
+        ],
+        "synergies": [
+            "war elephants",
+            "archers",
+            "knights"
+        ]
     },
     {
         "civilization": "poles",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "cavalry"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Obuch",
+                "type": "infantry"
+            },
+            {
+                "name": "Winged Hussar",
+                "type": "cavalry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Villagers regenerate {{BASE}} HP per minute in Feudal, {{BASE1}} in Castle, {{BASE2}} in Imperial Age",
+                "base": 10,
+                "base1": 15,
+                "base2": 20,
+                "type": "base"
+            },
+            {
+                "statement": "Folwark replaces Mill. Immediately collects {{BASE}}% of food from nearby newly constructed farms.",
+                "base": 8,
+                "type": "base"
+            },
+            {
+                "statement": "Stone Miners generate gold in addition to stone",
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Szlachta Privileges (Knights cost {{BASE}}% gold)",
+                "base": -60,
+                "type": "unique"
+            },
+            {
+                "statement": "Lechitic Legacy (Light Cavalry deals trample damage)",
+                "type": "unique"
+            },
+            {
+                "statement": "Scout Cavalry, Light Cavalry, Hussar +{{BASE}} attack vs. Archers",
+                "base": 1,
+                "type": "team"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Build farms and delete - Folwark collects food from nearby farms"
+            },
+            {
+                "text": "Light cavalry deal trample damage (once 'Lechitic Legacy' researched, imperial age)"
+            },
+            {
+                "text": "Light cavalry have attack bonus vs archers"
+            },
+            {
+                "text": "Stone miners generate gold"
+            },
+            {
+                "text": "Knights cost less gold"
+            },
+            {
+                "text": "Villagers regenerate health"
+            }
+        ],
+        "synergies": [
+            "knights",
+            "light cavalry",
+            "farms"
+        ]
     },
     {
-        "civilization": "portugese",
-        "type": [],
-        "economy": [],
-        "military": []
+        "civilization": "portuguese",
+        "type": [
+            "naval",
+            "gunpowder"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Organ Gun",
+                "type": "siege"
+            },
+            {
+                "name": "Caravel",
+                "type": "war ship"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "All units cost {{BASE}}% gold",
+                "base": -20,
+                "type": "base"
+            },
+            {
+                "statement": "Foragers generate wood in addition to food",
+                "type": "base"
+            },
+            {
+                "statement": "Can build Feitoria in Imperial Age",
+                "type": "base"
+            },
+            {
+                "statement": "Technologies researched {{BASE}}% faster",
+                "base": 25,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Ships +{{BASE}}% HP",
+                "base": 10,
+                "type": "base"
+            },
+            {
+                "statement": "Carrack (Ships +{{BASE}}/+{{BASE1}} armor)",
+                "base": 1,
+                "base1": 1,
+                "type": "unique"
+            },
+            {
+                "statement": "Arquebus (gunpowder units more accurate)",
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Rush for imperial and tell all team to build Feitoria in Imperial Age for fast resources"
+            },
+            {
+                "text": "Foragers generate wood"
+            },
+            {
+                "text": "All units cost no gold"
+            },
+            {
+                "text": "Gunpowder units more accurate"
+            },
+            {
+                "text": "Technologies researched faster"
+            },
+            {
+                "text": "Ships have more hit points and armor"
+            }
+        ],
+        "synergies": [
+            "feitoria",
+            "gunpowder",
+            "ships"
+        ]
     },
     {
         "civilization": "romans",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "infantry"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Centurion",
+                "type": "cavalry"
+            },
+            {
+                "name": "Legionary",
+                "type": "infantry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Villagers gather, build, and repair {{BASE}}% faster",
+                "base": 5,
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Galley-line and Dromons +{{BASE}}/+{{BASE1}}P armor",
+                "base": 1,
+                "base1": 1,
+                "type": "base"
+            },
+            {
+                "statement": "Infantry receives double effect from Blacksmith armor upgrades",
+                "type": "base"
+            },
+            {
+                "statement": "Scorpions cost {{BASE}}% gold and benefit from Ballistics research",
+                "base": -60,
+                "type": "base"
+            },
+            {
+                "statement": "Ballistas (Scorpions fire {{BASE}}% faster; Galley-line +{{BASE1}} attack)",
+                "base": 33,
+                "base1": 2,
+                "type": "unique"
+            },
+            {
+                "statement": "Comitatenses (Militia-line, Knight-line, and Centurions train {{BASE}}% faster and receive a charge attack)",
+                "base": 50,
+                "type": "unique"
+            },
+            {
+                "statement": "Scorpion-line minimum range reduced",
+                "type": "team"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Scorpions fire faster, cost no gold, benefit from ballistics and have no minimum range"
+            },
+            {
+                "text": "Militia line, Knight-line and Centurions have charge attack"
+            },
+            {
+                "text": "Infantry train faster"
+            }
+        ],
+        "synergies": [
+            "scorpions",
+            "infantry",
+            "militia",
+            "knight",
+            "gather"
+        ]
     },
     {
         "civilization": "saracens",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "camel",
+            "naval"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Mameluke",
+                "type": "camel rider"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Market trade cost only {{BASE}}%",
+                "base": 5,
+                "type": "base"
+            },
+            {
+                "statement": "Markets cost {{BASE}} wood",
+                "base": -100,
+                "type": "base"
+            },
+            {
+                "statement": "Transport Ships have {{BASE}}x hit points and {{BASE1}}x carry capacity",
+                "base": 2,
+                "base1": 2,
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Galleys attack {{BASE}}% faster",
+                "base": 25,
+                "type": "base"
+            },
+            {
+                "statement": "Camel units +{{BASE}} hit points",
+                "base": 10,
+                "type": "base"
+            },
+            {
+                "statement": "Foot archers +{{BASE}} attack vs. buildings",
+                "base": 2,
+                "type": "team"
+            },
+            {
+                "statement": "Zealotry (Camel units +{{BASE}} hit points)",
+                "base": 20,
+                "type": "unique"
+            },
+            {
+                "statement": "Counterweights (Trebuchets and Mangonel-line +{{BASE}}% attack)",
+                "base": 15,
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Camel units have more hit points"
+            },
+            {
+                "text": "Galleys attack faster"
+            },
+            {
+                "text": "Foot archers have attack bonus vs buildings"
+            },
+            {
+                "text": "Markets trade cost less to trade and markets cost no wood"
+            },
+            {
+                "text": "Transport ships have more hit points and carry capacity"
+            }
+        ],
+        "synergies": [
+            "camel",
+            "galleys",
+            "foot archers",
+            "transport ships",
+            "trade"
+        ]
     },
     {
         "civilization": "sicilians",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "infantry",
+            "cavalry"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Serjeant",
+                "type": "infantry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Start with +{{BASE}} stone",
+                "base": 100,
+                "type": "base"
+            },
+            {
+                "statement": "Castles built {{BASE}}% faster, Town Centers built {{BASE1}}% faster",
+                "base": 50,
+                "base1": 100,
+                "type": "base"
+            },
+            {
+                "statement": "Farm upgrades provide +{{BASE}}% additional food",
+                "base": 125,
+                "type": "base"
+            },
+            {
+                "statement": "Transport Ships +{{BASE}} line of sight and cost {{BASE1}}%",
+                "base": 5,
+                "base1": -50,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Land military units (except siege weapons) receive {{BASE}}% less bonus damage",
+                "base": 33,
+                "type": "base"
+            },
+            {
+                "statement": "Donjon replaces Watch Tower-line",
+                "type": "base"
+            },
+            {
+                "statement": "First Crusade (Each Town Center (maximum 5) spawns a one-time batch of 5 Serjeants; units more resistant to conversion)",
+                "type": "unique"
+            },
+            {
+                "statement": "Hauberk (Knights +{{BASE}}/+{{BASE1}}P armor)",
+                "base": 1,
+                "base1": 2,
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Castles and town centers build faster"
+            },
+            {
+                "text": "Start with extra stone"
+            },
+            {
+                "text": "Farms upgrades provide food"
+            },
+            {
+                "text": "Knights have more armor"
+            },
+            {
+                "text": "Land military units (except siege weapons) receive less bonus damage"
+            },
+            {
+                "text": "Serjeants can be spawned from town centers"
+            }
+        ],
+        "synergies": [
+            "infantry",
+            "cavalry",
+            "cavalry archers",
+            "camels",
+            "elephants",
+            "serjeant",
+            "knights",
+            "town centers",
+            "castles",
+            "farms"
+        ]
     },
     {
         "civilization": "slavs",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "infantry",
+            "siege"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Boyar",
+                "type": "cavalry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Farmers work {{BASE}}% faster",
+                "base": 10,
+                "type": "base"
+            },
+            {
+                "statement": "Supplies, Gambesons free",
+                "type": "base"
+            },
+            {
+                "statement": "Military buildings provide +{{BASE}} population room",
+                "base": 5,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Siege Workshop units {{BASE}}% cheaper",
+                "base": 15,
+                "type": "base"
+            },
+            {
+                "statement": "Monks move {{BASE}}% faster",
+                "base": 20,
+                "type": "base"
+            },
+            {
+                "statement": "Detinets (Replaces {{BASE}}% of Castles' and Towers' stone cost with wood)",
+                "base": 40,
+                "type": "unique"
+            },
+            {
+                "statement": "Druzhina (Infantry damage adjacent units)",
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Farm - farmers work faster"
+            },
+            {
+                "text": "Military buildings provide more population room (5x multiplier)"
+            },
+            {
+                "text": "Siege workshop units cost less or free!"
+            },
+            {
+                "text": "Infantry damage adjacent units"
+            },
+            {
+                "text": "Monks move faster"
+            },
+            {
+                "text": "Castles and towers cost less/no stone"
+            }
+        ],
+        "synergies": [
+            "farming",
+            "siege",
+            "monks",
+            "infantry",
+            "castles",
+            "towers"
+        ]
     },
     {
         "civilization": "spanish",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "gunpowder",
+            "monk"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Conquistador",
+                "type": "mounted hand cannoneer"
+            },
+            {
+                "name": "Missionary",
+                "type": "mounted Monk"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Builders work {{BASE}}% faster",
+                "base": 30,
+                "type": "base"
+            },
+            {
+                "statement": "Blacksmith upgrades don't cost gold",
+                "type": "base"
+            },
+            {
+                "statement": "Receive +{{BASE}} gold for each technology researched",
+                "base": 20,
+                "type": "base"
+            },
+            {
+                "statement": "Trade units generate +{{BASE}}% gold",
+                "base": 25,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Cannon Galleons benefit from Ballistics (fire faster, more accurately)",
+                "type": "base"
+            },
+            {
+                "statement": "Gunpowder units fire {{BASE}}% faster",
+                "base": 18,
+                "type": "base"
+            },
+            {
+                "statement": "Inquisition (Monks convert faster; Missionaries +{{BASE}} range)",
+                "base": 1,
+                "type": "unique"
+            },
+            {
+                "statement": "Supremacy (Villagers stronger in combat)",
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Builders work faster"
+            },
+            {
+                "text": "Blacksmith upgrades cost no gold"
+            },
+            {
+                "text": "Receive gold for each technology researched"
+            },
+            {
+                "text": "Gunpowder units fire faster"
+            },
+            {
+                "text": "Monks convert faster"
+            },
+            {
+                "text": "Villagers stronger in combat"
+            }
+        ],
+        "synergies": [
+            "builders",
+            "blacksmith",
+            "gunpowder",
+            "monks",
+            "trade",
+            "villagers"
+        ]
     },
     {
         "civilization": "tatars",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "cavalry archer"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Keshik",
+                "type": "raiding cavalry"
+            },
+            {
+                "name": "Flaming Camel",
+                "type": "petard"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Villagers gather +{{BASE}}% food from herdables",
+                "base": 50,
+                "type": "base"
+            },
+            {
+                "statement": "New Town Centers spawn {{BASE}} Sheep starting in the Castle Age",
+                "base": 2,
+                "type": "base"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Thumb Ring, Parthian Tactics free",
+                "type": "base"
+            },
+            {
+                "statement": "Cavalry Archers +{{BASE}} line of sight",
+                "base": 2,
+                "type": "team"
+            },
+            {
+                "statement": "Units deal +{{BASE}}% damage when fighting from higher elevation",
+                "base": 25,
+                "type": "base"
+            },
+            {
+                "statement": "Silk Armor (Light Cavalry, Steppe Lancers and Cavalry Archers receive +{{BASE}}/+{{BASE1}}P armor)",
+                "base": 1,
+                "base1": 1,
+                "type": "unique"
+            },
+            {
+                "statement": "Timurid Siegecraft (Trebuchets +{{BASE}} range, enables Flaming Camels)",
+                "base": 2,
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Villagers gather more food from herdables (eg. sheep, peacocks...)"
+            },
+            {
+                "text": "Wall in front of hill - huge advantage when fighting from higher elevation"
+            },
+            {
+                "text": "Trebuchets have more range"
+            },
+            {
+                "text": "Light cavalry, steppe lancers and cavalry archers have more armor"
+            },
+            {
+                "text": "New town centers spawn sheep"
+            },
+            {
+                "text": "Cavalry archers have more line of sight"
+            }
+        ],
+        "synergies": [
+            "cavalry archers",
+            "towers",
+            "trebuchets",
+            "sheep"
+        ]
     },
     {
         "civilization": "teutons",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "infantry"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Teutonic Knight",
+                "type": "infantry"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Monks healing range {{BASE}}x",
+                "base": 2,
+                "type": "base"
+            },
+            {
+                "statement": "Murder Holes, Herbal Medicine free",
+                "type": "base"
+            },
+            {
+                "statement": "Farms cost {{BASE}}%",
+                "base": -40,
+                "type": "base"
+            },
+            {
+                "statement": "Town Center garrison +{{BASE}}",
+                "base": 10,
+                "type": "base"
+            },
+            {
+                "statement": "Units resist conversion",
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Barracks and Stable units +{{BASE}} armor in Castle and Imperial Age (+{{BASE1}} total)",
+                "base": 1,
+                "base1": 2,
+                "type": "base"
+            },
+            {
+                "statement": "Towers garrison {{BASE}}x units",
+                "base": 2,
+                "type": "base"
+            },
+            {
+                "statement": "Ironclad (siege weapons extra melee armor)",
+                "type": "unique"
+            },
+            {
+                "statement": "Crenellations (+{{BASE}} range Castles, garrisoned infantry fire arrows)",
+                "base": 3,
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Barracks and stable units have more armor"
+            },
+            {
+                "text": "Monks heal range 2xmultiplier"
+            },
+            {
+                "text": "Towers can garrison more units"
+            },
+            {
+                "text": "Seige units more resistant to melee attacks"
+            },
+            {
+                "text": "Castles have huge range"
+            },
+            {
+                "text": "Units resist conversion"
+            },
+            {
+                "text": "Farms cost less/free"
+            }
+        ],
+        "synergies": [
+            "barracks",
+            "stable",
+            "monks",
+            "towers",
+            "siege",
+            "farms",
+            "castles"
+        ]
     },
     {
         "civilization": "turks",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": [
+            "gunpowder"
+        ],
+        "uniqueUnit": [
+            {
+                "name": "Janissary",
+                "type": "hand cannoneer"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Gold miners work {{BASE}}% faster",
+                "base": 20,
+                "type": "base"
+            },
+            {
+                "statement": "Gunpowder units created {{BASE}}% faster",
+                "base": 25,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Gunpowder units +{{BASE}}% hit points; researching gunpowder technologies costs {{BASE1}}%; Chemistry free",
+                "base": 25,
+                "base1": -50,
+                "type": "base"
+            },
+            {
+                "statement": "Scout Cavalry, Light Cavalry, Hussar +{{BASE}}P armor",
+                "base": 1,
+                "type": "base"
+            },
+            {
+                "statement": "Light Cavalry and Hussar upgrades free",
+                "type": "base"
+            },
+            {
+                "statement": "Sipahi (Cavalry Archers +{{BASE}} HP)",
+                "base": 20,
+                "type": "unique"
+            },
+            {
+                "statement": "Artillery (+2 range Bombard Towers, Bombard Cannons, Cannon Galleons)",
+                "type": "unique"
+            }
+        ],
+        "statements": [ 
+            {
+                "text": "Bombard towers, bombard cannons and cannon galleons have huge range"
+            },
+            {
+                "text": "Gold miners work faster"
+            },
+            {
+                "text": "Gunpowder units have more hit points and created faster"
+            },
+            {
+                "text": "Cavalry archers have more hit points"
+            },
+            {
+                "text": "Scout cavalry, light cavalry and hussars free upgrades and have more armor"
+            }
+            
+        ],
+        "synergies": [  
+            "gold miners",
+            "gunpowder",
+            "cavalry archers",
+            "scout cavalry",
+            "light cavalry",
+            "hussars",
+            "bombard towers",
+            "bombard cannons",
+            "cannon galleons"
+        ]
     },
     {
         "civilization": "vietnamese",
-        "type": [],
-        "economy": [],
-        "military": []
-    },
+        "type": ["archer"],
+        "uniqueUnit": [
+            {
+                "name": "Rattan Archer",
+                "type": "archer"
+            },
+            {
+                "name": "Imperial Skirmisher",
+                "type": "skirmisher"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Enemy positions are revealed at the start of the game",
+                "type": "base"
+            },
+            {
+                "statement": "Economic upgrades cost no wood and research {{BASE}}% faster",
+                "base": 100,
+                "type": "base"
+            },
+            {
+                "statement": "Imperial Skirmisher upgrade available in the Imperial Age",
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Archery Range units +{{BASE}}% HP",
+                "base": 20,
+                "type": "base"
+            },
+            {
+                "statement": "Conscription free",
+                "type": "base"
+            },
+            {
+                "statement": "Chatras (Battle Elephants +{{BASE}} HP)",
+                "base": 100,
+                "type": "unique"
+            },
+            {
+                "statement": "Paper Money (Lumberjacks slowly generate gold in addition to wood)",
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Lumberjacks generate gold"
+            },
+            {
+                "text": "Battle elephants have more HP"
+            },
+            {
+                "text": "Economic upgrades cost no wood and research faster"
+            },
+            {
+                "text": "Archery range units have more hit points"
+            },
+            {
+                "text": "Imperial skirmisher upgrade available"
+            }
+        ],
+        "synergies": [  
+            "battle elephants",
+            "archery range",
+            "lumberjacks",
+            "imperial skirmisher"
+        ]
+    },    
     {
         "civilization": "vikings",
-        "type": [],
-        "economy": [],
-        "military": []
+        "type": ["infantry", "naval"],
+        "uniqueUnit": [
+            {
+                "name": "Berserk",
+                "type": "infantry"
+            },
+            {
+                "name": "Longboat",
+                "type": "warship"
+            }
+        ],
+        "economy": [
+            {
+                "statement": "Wheelbarrow, Hand Cart free",
+                "type": "base"
+            },
+            {
+                "statement": "Docks cost {{BASE}}%",
+                "base": -15,
+                "type": "team"
+            }
+        ],
+        "military": [
+            {
+                "statement": "Infantry +{{BASE}}% hit points starting in Feudal Age",
+                "base": 20,
+                "type": "base"
+            },
+            {
+                "statement": "Warships cost {{BASE}}% Feudal Age, {{BASE1}}% Castle Age, {{BASE2}}% Imperial Age",
+                "base": -15,
+                "base1": -15,
+                "base2": -20,
+                "type": "base"
+            },
+            {
+                "statement": "Chieftains (infantry deal bonus damage to cavalry, generate gold when killing villagers, trade units, and monks)",
+                "type": "unique"
+            },
+            {
+                "statement": "Bogsveigar (Archer-line and Longboats +{{BASE}} attack)",
+                "base": 1,
+                "type": "unique"
+            }
+        ],
+        "statements": [
+            {
+                "text": "Infantry have more HP, deal bonus damage to cavalry, generate gold when killing villagers, trade units, and monks"
+            },
+            {
+                "text": "Archers and longboats have more attack"
+            },
+            {
+                "text": "Warships cost less"
+            },
+            {
+                "text": "Docks cost less"
+            },
+            {
+                "text": "Wheelbarrow and hand cart free"
+            }
+        ],
+        "synergies": [  
+            "infantry",
+            "archers",
+            "longboats",
+            "warships",
+            "docks"
+        ]
     }
+    
 ]
