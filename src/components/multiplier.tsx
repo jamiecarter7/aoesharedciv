@@ -1,13 +1,14 @@
 import { For, createSignal } from "solid-js";
-
+import { metaTitle } from "../pages/index.astro";
 export const [multiplier, setMultiplier] = createSignal(10 as number);
 
 export default function MyComponent() {
   function changeMultiplier(number: number) {
     setMultiplier(number);
+    // document.title = metaTitle + `${number}x`;
   }
 
-  const multipliers = [3, 6, 10];
+  const multipliers = [3, 6, 8, 9, 10];
   return (
     <>
       <div class="flex justify-end items-center gap-3">

@@ -1,0 +1,195 @@
+---
+
+---
+<footer class="footer bg-black/20">
+    <div class="linksection">
+      <div class="logowrap">
+        <div class="logo">
+          <!-- <router-link :to="{name: 'sls-home'}"> -->
+          <img src="../assets/logo/spirespy.svg" alt="">
+          <!-- </router-link> -->
+          <p>Created by <a href="https://maybelatergames.co.uk" class="underline">maybelatergames</a></p>
+        </div>
+      </div>
+      <div class="linklistblock">
+
+        <div class="linklist">
+          <h2>Card Tier Lists</h2>
+          <ul>
+            <li>
+              <a href="">Test</a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="linklist">
+          <h2>Relic Tier Lists</h2>
+          <ul>
+            <li>
+              <a href="">test</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="linklist">
+          <h2>Shared Civ Bonus</h2>
+          <ul>
+            <li>
+              <a href="">test</a>
+            </li>
+          </ul>
+          <h2 class="block mt-16">Other</h2>
+          <ul>
+            <li>
+              <a href="">test</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center bg-black/25 p-3">
+      <p>Shared Civ Bonus is not an official website of, or affliated, with <a href="https://www.ageofempires.com/"
+          class="underline">Age of Empires</a></p>
+    </div>
+  </footer>
+</template>
+  
+<style lang="scss" scoped>
+.footer {
+  padding: 1px;
+
+  .inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 80px 0;
+    display: grid;
+    padding: 40px;
+    flex-direction: column;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 50px;
+  }
+
+  .first {
+    background: #22353f;
+  }
+}
+
+
+
+h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  opacity: 0.75;
+  margin: 20px 0 12px;
+}
+
+.logo {
+  max-width: 100%;
+  text-align: center;
+  margin: auto;
+
+  @media screen and (min-width: 260px) {
+    max-width: 220px;
+  }
+
+  @media (min-width: 820px) {
+    margin: 0;
+    max-width: 70%;
+
+  }
+}
+
+.logowrap {
+  margin-top: 30px;
+
+  @media (min-width: 820px) {
+    margin-top: 0;
+  }
+}
+
+.linksection {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  padding: 40px;
+  flex-direction: column-reverse;
+
+  @media (min-width: 820px) {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.linklistblock {
+  display: grid;
+  gap: 30px 0;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+
+  @media (min-width: 820px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.linklist {
+  ul {
+    li {
+      padding: 2px 0;
+      margin: 2px 0;
+    }
+  }
+}
+
+.text {
+  margin: 0;
+  display: block;
+  font-size: 15px;
+  max-height: 90px;
+  overflow: hidden;
+  // max-height: 100px;
+}
+
+.commenterror {
+  // text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  max-width: 100%;
+  align-items: center;
+  margin: 4px 0;
+  justify-content: center;
+
+  .text {
+    font-size: 18px;
+  }
+}
+
+.commenttryagainbutton {
+  border: 1px solid rgba($color: #fff6e1, $alpha: 0.55);
+  background: rgba(#fff6e1, 0.15);
+  // margin: 0 auto 20px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 6px 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.name {
+  padding: 10px 0 6px 48px;
+}
+
+.view {
+  padding: 10px 10px 6px 0;
+  font-size: 15px;
+  // text-transform: uppercase;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}</style> 

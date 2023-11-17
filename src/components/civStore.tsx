@@ -3,7 +3,7 @@ import { multiplier } from "./multiplier";
 // export default createSignal([]);
 import data from "../data/civData.json";
 
-interface SelectedCivs {
+type SelectedCivs = {
   name: string;
   myCiv: boolean;
 }
@@ -53,6 +53,13 @@ export const addCivString = (civName: string) => {
     selectCivObj.myCiv = true;
   }
   setSelectedCivs([...selectedCivs(), selectCivObj]);
+};
+
+export const removeCivByName = (civName: string) => {
+  const civsList = selectedCivs();
+  const civIndex = civsList.findIndex((civ) => civ.name === civName);
+  civsList.splice(civIndex, 1);
+  setSelectedCivs([...civsList]);
 };
 
 export const civsData = createMemo(() => {

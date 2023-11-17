@@ -4,6 +4,8 @@ import CivLists from "../components/civList";
 import CivSynergies from "../components/civSynergies";
 import Stage from "../components/stage";
 import CivSelected from "../components/civSelectedList";
+import { multiplier } from "../components/multiplier";
+// export const metaTitle = "Shared civ bonus - ";
 ---
 
 <script>
@@ -19,13 +21,13 @@ import CivSelected from "../components/civSelectedList";
 <script async defer src="https://simple.maybelatergames.co.uk/latest.js"></script>
 <noscript><img src="https://simple.maybelatergames.co.uk/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 
-<Layout title="10x shared civ bonus">
+<Layout title={`Shared civ bonus - ${multiplier()}x`}>
   <main>
     <CivSelected client:load />
     <div class="w-full m-auto p-12">
-      <CivSynergies client:load />
+      <Stage client:load />
       <CivLists client:load />
-      <Stage client:load>
+      <CivSynergies client:load />
         
     </div>
   </main>

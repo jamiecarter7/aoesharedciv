@@ -1,6 +1,6 @@
 --- 
 import Nav from '../components/navigation.astro'
-
+import Footer from '../components/Footer.astro'
 interface Props {
 	title: string;
 }
@@ -12,15 +12,19 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
+		<meta name="description" content="A team builder for AOE:DE shared civ bonus. See a detailed breakdown of team bonuses. Learn early, mid and late game advantages.">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-indigo-950 text-white">
+	<body class="flex flex-col bg-indigo-950 text-white">
+		<div class="bg-indigo-600/90 text-center p-1.5 text-xs text-indigo-200 font-semibold">This tool is in alpha, thing may be broken at any time!</div>
 		<Nav />
-		<slot />
+		<div class="flex-grow">
+			<slot/>
+		</div>
+		<Footer />
 	</body>
 </html>
 <style is:global>
