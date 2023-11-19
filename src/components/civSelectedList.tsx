@@ -10,17 +10,17 @@ export default function MyComponent() {
         }
       >
         <div class=" max-w-4xl m-auto">
-          <div class="grid grid-cols-4 gap-4 w-full ">
+          <div class="grid grid-cols-4 gap-2.5 w-full ">
             <For each={selectedCivs()}>
               {(civ) => (
                 <div
                   onclick={[removeCivByName, civ.name]}
-                  class="relative p-1.5 pt-4 pb-2 bg-indigo-800/50 border-2 border-indigo-900 border-t-[1px] border-t-indigo-600 flex items-center text-sm rounded-lg overflow-hidden"
+                  class="relative p-1.5 pt-4 pb-2 bg-indigo-800/30 hover:bg-indigo-800/60 hover:cursor-pointer border-[1px] border-indigo-800/80 border-t-[1px] border-t-indigo-700 flex items-center text-sm rounded-lg overflow-hidde shadow-md"
                 >
-                  <div class=" text-lg px-2.5 capitalize font-semibold">
+                  <div class=" text-xl px-2.5 capitalize font-semibold">
                     {civ.name}
                   </div>
-                  <button class="absolute top-1.5 right-1 blockflex items-center justify-center text-xs font-semibold bg-white/[10%] px-2 py-1.5 rounded-md">
+                  <button class="absolute top-1 right-1 blockflex items-center justify-center text-xs font-semibold bg-indigo-700/70 px-2 py-1 rounded-md">
                     Remove
                   </button>
                 </div>

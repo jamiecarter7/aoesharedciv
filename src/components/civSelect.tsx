@@ -61,16 +61,13 @@ export default function MyComponent() {
   return (
     <>
       <div class="relative">
-        {/* <label for="civ1" class="text-xs mt-4 mb-2">
-          Add civilization
-        </label> */}
         <div
-          class={`flex items-center w-full overflow-hidden bg-indigo-950 rounded-lg font-xl font-medium border-b-[1px] border-indigo-500 shadow-inner duration-100 ease-in-out ${
+          class={`flex items-center w-full h-12 overflow-hidden group bg-indigo-950 group-focus:bg-indigo-700 rounded-lg font-xl font-medium border-b-[1px] border-indigo-500 shadow-inner duration-100 ease-in-out ${
             search().length > 0 ? "rounded-b-none" : ""
           }`}
         >
           <input
-            class="block outline-none w-full p-3 px-5 bg-indigo-950 placeholder:text-indigo-400 placeholder:text-opacity-80 text-xl"
+            class="block outline-none w-full h-12 p-2 px-5 bg-indigo-950 group-focus:bg-indigo-700 placeholder:text-indigo-400 placeholder:text-opacity-80 text-xl"
             id="CivSelectInput"
             type="text"
             placeholder="Add civilization"

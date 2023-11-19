@@ -1,4 +1,4 @@
-import { For, createMemo } from "solid-js";
+import { For, Show, createMemo } from "solid-js";
 import { civsData } from "./civStore";
 
 export default function MyComponent() {
@@ -27,17 +27,23 @@ export default function MyComponent() {
   });
 
   return (
-    <>
-      <div class="flex w-full bg-indigo-900/60 p-2">
+    <Show when={synergies().length > 0}>
+      <div class="flex gap-4 w-full p-2">
         <For each={synergies()}>
           {(synergy) => (
-            <div class="bg-indigo-700 flex items-center text-sm">
-              <div class="px-2.5 capitalize font-semibold">{synergy.string} {synergy.count.toString()}</div>
+            <div class="bg-indigo-700 flex items-center text-sm rounded-md">
+              <p class="relative p-1.5 px-2.5 bg-indigo-800">
+                {synergy.count.toString()}
+                <span class="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 p-0.5 bg-indigo-800 rounded-full">x</span>
+              </p>
               
+              <p class="p-1.5 px-2.5 capitalize font-semibold">
+                {synergy.string}
+              </p>
             </div>
           )}
         </For>
       </div>
-    </>
+    </Show>
   );
 }
